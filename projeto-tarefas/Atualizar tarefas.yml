@@ -1,0 +1,26 @@
+info:
+  name: Atualizar tarefas
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: http://localhost:3000/tarefas/4
+  body:
+    type: json
+    data: |2-
+      
+         {
+          "nome": "Fazer trabalho de biologia",
+          "descricao": "Trabalho sobre células",
+          "responsavel": "Bruno",
+          "data_tarefa": "2026-10-30",
+          "concluido": 1
+        }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
